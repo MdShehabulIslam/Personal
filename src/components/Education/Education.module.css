@@ -1,101 +1,185 @@
 @import "../../vars.css";
 
 .container {
-  position: relative;
-  background-color: rgba(12, 12, 12, 0.6);
-  border-radius: 15px;
-  padding: 73px;
-  margin-top: 129px;
-  z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
-  height: 100vh;
-}
-
-.title {
-  color: var(--color-text);
-  font-size: 35px;
-  font-weight: 700;
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
-  text-align: left;
-  margin-bottom: 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 10%;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 55, 109, 0) 0%,
+    rgba(25, 55, 109, 0.2) 100%
+  );
 }
 
 .content {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 50px;
+  width: 100%;
+  max-width: 1400px;
 }
 
-.educationImage {
-  width: 35%;
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, var(--color-text), var(--color-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .educationItems {
-  color: var(--color-text);
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.educationItems::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
 }
 
 .educationItem {
   display: flex;
-  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  background: rgba(25, 55, 109, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 16px;
+  position: relative;
+}
+
+.educationItem::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 30px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 2px solid var(--color-text);
+  z-index: 1;
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
   align-items: center;
-  border-radius: 20px;
-  list-style: none;
-  padding: 25px;
-  background-image: linear-gradient(
-    90deg,
-    rgba(165, 215, 232, 0.42) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  background-size: 0 100%;
-  background-repeat: no-repeat;
-  transition: 0.4s;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.educationItem:hover {
-  background-size: 100% 100%;
+.iconWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.educationItem h3 {
-  font-size: 25px;
+.educationItemText {
+  flex: 1;
+}
+
+.educationItemText h3 {
+  color: var(--color-text);
+  font-size: 1.2rem;
   font-weight: 600;
+  margin: 0 0 0.5rem 0;
 }
 
-.educationItem p {
-  font-size: 20px;
+.institution {
+  color: var(--color-text);
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0 0 0.5rem 0;
 }
 
-.educationItem img {
-  margin-right: 10px;
+.grade {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
 }
 
-@media screen and (max-width: 830px) {
+.imageWrapper {
+  flex: 1;
+  max-width: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.educationImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 968px) {
   .container {
-    background-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 60px 5%;
   }
 
-  .content {
-    flex-direction: column;
-    align-items: center;
+  .contentWrapper {
+    flex-direction: column-reverse;
+    gap: 3rem;
   }
 
-  .educationImage {
-    display: none;
+  .imageWrapper {
+    width: 100%;
+    max-width: 400px;
   }
 
   .educationItems {
-    margin-top: 29px;
+    width: 100%;
+  }
+
+  .educationItems::before {
+    left: 20px;
   }
 
   .educationItem {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 1.2rem;
+    gap: 1.5rem;
+  }
+
+  .educationItem::before {
+    left: -30px;
+  }
+
+  .iconWrapper {
+    width: 40px;
+    height: 40px;
   }
 }

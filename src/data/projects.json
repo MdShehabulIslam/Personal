@@ -1,26 +1,26 @@
 [
   {
-    "title": "CRUD App",
+    "title": "Tenant Management System",
     "imageSrc": "projects/crud.png",
-    "description": "This is a user-friendly Frontend development interface and Dynamic data management project",
-    "skills": ["React", "NodeJS", "Axios", "PostgreSQL"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "description": "Implemented a user-friendly Frontend Development Interface and Dynamic Data Management Project",
+    "skills": ["React", "Daisy UI","NodeJS", "Axios", "PostgreSQL"],
+    "demo": "https://github.com/MdShehabulIslam/Movie-App",
+    "source": "https://github.com/MdShehabulIslam/Movie-App"
   },
   {
     "title": "Retrievium",
-    "imageSrc": "projects/retrievium.jpg",
-    "description": "Performed data extraction, created a CSV schema and generated a mapping script",
-    "skills": ["Python", "Git", "PostgreSQL"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "imageSrc": "projects/retrievium.png",
+    "description": "Performed Data Extraction, created a CSV schema and generated a mapping script",
+    "skills": ["Python", "Git", "PostgreSQL", "Excel", "Pandas"],
+    "demo": "https://retrievium.ca/",
+    "source": "https://drive.google.com/drive/folders/1pym7Maufr8WmXFY09FiYRA6xF0yYBj8c?usp=drive_link"
   },
   {
-    "title": "Infinix Broadband",
-    "imageSrc": "projects/internet.jpg",
-    "description": "Implementing a responsive layout, developing backend with Express and PostgreSQL, creating RESTful APIs",
-    "skills": ["React", "Express", "Node", "PostgreSQL"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "Movie API App",
+    "imageSrc": "projects/movieapp.png",
+    "description": "Implementing a Responsive layout, Real-World API that can Fetch, Search and Display data",
+    "skills": ["React Hooks", "Page Routing", "Calling APIs", "Responsive Design"],
+    "demo": "https://github.com/MdShehabulIslam/Movie-App",
+    "source": "https://github.com/MdShehabulIslam/Movie-App"
   }
 ]

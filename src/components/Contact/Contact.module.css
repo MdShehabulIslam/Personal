@@ -1,64 +1,200 @@
 @import "../../vars.css";
 
 .container {
-  color: var(--color-text);
-  margin-top: 120px;
-  background-color: var(--color-secondary);
+  min-height: 80vh;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 100vw;
-  padding: 58px 10%;
-  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 10%;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 55, 109, 0.2) 0%,
+    rgba(25, 55, 109, 0) 100%
+  );
+}
+
+.content {
+  width: 100%;
+  max-width: 1400px;
+}
+
+.text {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .text h2 {
-  font-size: 80px;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
-  letter-spacing: 4px;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--color-text), var(--color-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .text p {
-  font-size: 40px;
-  font-weight: 400;
-  letter-spacing: 2px;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+.contactWrapper {
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+}
+
+.form {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: rgba(25, 55, 109, 0.1);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--color-text);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitButton {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border: none;
+  border-radius: 8px;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submitStatus {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.success {
+  background: rgba(46, 213, 115, 0.2);
+  color: #2ed573;
+}
+
+.error {
+  background: rgba(255, 71, 87, 0.2);
+  color: #ff4757;
 }
 
 .links {
+  flex: 1;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  gap: 2rem;
   list-style: none;
-  gap: 26px;
+  padding: 0;
 }
 
 .link {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 1.5rem;
+  padding: 1.2rem;
+  background: rgba(25, 55, 109, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.iconWrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.iconWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .link a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: 30px;
-  font-weight: 400;
-  letter-spacing: 1.5px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
-@media screen and (max-width: 830px) {
+.link:hover a {
+  color: var(--color-primary);
+}
+
+@media screen and (max-width: 968px) {
   .container {
-    flex-direction: column;
-    gap: 23px;
+    padding: 60px 5%;
   }
 
-  .text {
-    display: flex;
+  .contactWrapper {
     flex-direction: column;
-    align-items: center;
+    gap: 3rem;
   }
 
+  .form,
   .links {
-    align-items: center;
+    max-width: 100%;
+  }
+
+  .link {
+    padding: 1rem;
   }
 }

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FiDownload } from "react-icons/fi";
 import styles from "./Hero.module.css";
 import { getImageUrl } from "../../utils";
 
@@ -44,15 +45,28 @@ export const Hero = () => {
           I&apos;m a full-stack developer with a passion for problem-solving and
           commitment to continuous learning.
         </motion.p>
-        <motion.a
-          href="#contact"
-          className={styles.contactBtn}
-          variants={itemVariants}
-          whileHover={{ scale: 1.05, y: -2 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Contact Me
-        </motion.a>
+        <div className={styles.btnContainer}>
+          <motion.a
+            href="#contact"
+            className={styles.contactBtn}
+            variants={itemVariants}
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Contact Me
+          </motion.a>
+          <motion.a
+            href="/resume/resume.pdf"
+            download="Mohammad_Shehabul_Islam_Resume.pdf"
+            className={styles.resumeBtn}
+            variants={itemVariants}
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Download Resume
+            <FiDownload className={styles.downloadIcon} />
+          </motion.a>
+        </div>
       </motion.div>
       <motion.img
         src={getImageUrl("hero/heroImage.png")}
