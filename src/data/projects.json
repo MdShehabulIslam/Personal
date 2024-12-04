@@ -1,0 +1,26 @@
+[
+  {
+    "title": "CRUD App",
+    "imageSrc": "projects/crud.png",
+    "description": "This is a user-friendly Frontend development interface and Dynamic data management project",
+    "skills": ["React", "NodeJS", "Axios", "PostgreSQL"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Retrievium",
+    "imageSrc": "projects/retrievium.jpg",
+    "description": "Performed data extraction, created a CSV schema and generated a mapping script",
+    "skills": ["Python", "Git", "PostgreSQL"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Infinix Broadband",
+    "imageSrc": "projects/internet.jpg",
+    "description": "Implementing a responsive layout, developing backend with Express and PostgreSQL, creating RESTful APIs",
+    "skills": ["React", "Express", "Node", "PostgreSQL"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  }
+]

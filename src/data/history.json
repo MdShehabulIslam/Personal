@@ -1,0 +1,40 @@
+[
+  {
+    "role": "Teaching Assistant",
+    "organisation": "MUN",
+    "startDate": "Sept, 2022",
+    "endDate": "Apr, 2024",
+    "experiences": ["Guided students in labs", "Reported student progress"],
+    "imageSrc": "history/memorial.png"
+  },
+  {
+    "role": "Software Developer",
+    "organisation": "CSIpix",
+    "startDate": "Sept, 2022",
+    "endDate": "Apr, 2023",
+    "experiences": [
+      "Extracted biometric data",
+      "Optimized code for efficiency"
+    ],
+    "imageSrc": "history/csipix.png"
+  },
+  {
+    "role": "Lecturer",
+    "organisation": "BRAC University",
+    "startDate": "Sept, 2021",
+    "endDate": "Jan, 2022",
+    "experiences": [
+      "Supervised laboratory sessions",
+      "Fostered interactive learning"
+    ],
+    "imageSrc": "history/brac.png"
+  },
+  {
+    "role": "Project Management",
+    "organisation": "Uber",
+    "startDate": "Mar, 2021",
+    "endDate": "June, 2022",
+    "experiences": ["Analyzed data for insights", "Managed detailed reports"],
+    "imageSrc": "history/uber.png"
+  }
+]

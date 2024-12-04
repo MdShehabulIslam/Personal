@@ -1,0 +1,135 @@
+@import "../../vars.css";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 10%;
+  background: transparent;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.scrolled {
+  background: rgba(25, 55, 109, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 1rem 10%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-text);
+  background: linear-gradient(90deg, var(--color-text), var(--color-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.menuBtn {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menuItems {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItems li {
+  position: relative;
+}
+
+.menuItems a {
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menuItems a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.menuItems a:hover::after {
+  width: 100%;
+}
+
+@media screen and (max-width: 830px) {
+  .navbar {
+    padding: 1rem 5%;
+  }
+
+  .scrolled {
+    padding: 0.8rem 5%;
+  }
+
+  .menu {
+    position: relative;
+  }
+
+  .menuBtn {
+    display: block;
+    z-index: 2;
+  }
+
+  .menuItems {
+    position: absolute;
+    top: calc(100% + 1rem);
+    right: 0;
+    flex-direction: column;
+    gap: 0.8rem;
+    min-width: 200px;
+    background: rgba(25, 55, 109, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .menuItems a {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .menuItems a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .menuItems a::after {
+    display: none;
+  }
+
+  .menuOpen {
+    display: flex;
+  }
+}
