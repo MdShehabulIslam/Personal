@@ -56,7 +56,7 @@ export const Hero = () => {
             Contact Me
           </motion.a>
           <motion.a
-            href="/resume/resume.pdf"
+            href="/resume/Resume_Mohammad_Shehabul_Islam.pdf"
             download="Mohammad_Shehabul_Islam_Resume.pdf"
             className={styles.resumeBtn}
             variants={itemVariants}
