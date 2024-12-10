@@ -20,7 +20,7 @@
     "imageSrc": "projects/movieapp.png",
     "description": "Implementing a Responsive layout, Real-World API that can Fetch, Search and Display data",
     "skills": ["React Hooks", "Page Routing", "Calling APIs", "Responsive Design"],
-    "demo": "https://github.com/MdShehabulIslam/Movie-App",
+    "demo": "https://mymovielistapi.netlify.app/",
     "source": "https://github.com/MdShehabulIslam/Movie-App"
   }
 ]

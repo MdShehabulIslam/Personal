@@ -80,6 +80,12 @@ export const Contact = () => {
       alt: "Github icon",
       href: "https://github.com/MdShehabulIslam",
       text: "MdShehabulIslam"
+    },
+    {
+      icon: "contact/leetcodeIcon.png",
+      alt: "Leetcode Icon",
+      href: "https://leetcode.com/u/mohammadsi/",
+      text: "Mohammadsi"
     }
   ];
 
