@@ -22,10 +22,10 @@ const TypewriterEffect = ({ text }) => {
 };
 
 export const Hero = () => {
-  const controls = useAnimation();
+  const waveControls = useAnimation();
 
   useEffect(() => {
-    controls.start({
+    waveControls.start({
       y: [0, -10, 0],
       transition: {
         duration: 2,
@@ -33,7 +33,7 @@ export const Hero = () => {
         ease: "easeInOut"
       }
     });
-  }, [controls]);
+  }, [waveControls]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -67,7 +67,7 @@ export const Hero = () => {
         animate="visible"
       >
         <motion.p variants={itemVariants} className={styles.header}>
-          Hi there <motion.span animate={controls} style={{ display: "inline-block" }}>👋</motion.span>, My name is
+          Hi there <motion.span animate={waveControls} style={{ display: "inline-block" }}>👋</motion.span>, My name is
         </motion.p>
         <motion.h1 variants={itemVariants} className={styles.title}>
           Mohammad Shehabul Islam
@@ -82,33 +82,31 @@ export const Hero = () => {
           <motion.a
             href="#contact"
             className={styles.contactBtn}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
             Contact Me
           </motion.a>
           <motion.a
-            className={styles.downloadBtn}
-            href={getImageUrl("resume.pdf")}
-            download
-            whileHover={{ scale: 1.05 }}
+            href="/resume/Resume_Mohammad_Shehabul_Islam.pdf"
+            download="Resume_Mohammad_Shehabul_Islam.pdf"
+            className={styles.resumeBtn}
+            whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
-            Download CV <FiDownload />
+            Download CV
+            <FiDownload className={styles.downloadIcon} />
           </motion.a>
         </motion.div>
       </motion.div>
       <motion.img
+        variants={itemVariants}
         src={getImageUrl("hero/heroImage.png")}
-        alt="Hero image of me"
+        alt="Hero image of Mohammad Shehabul Islam"
         className={styles.heroImg}
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        whileHover={{ scale: 1.02 }}
       />
       <div className={styles.topBlur} />
       <div className={styles.bottomBlur} />
     </section>
   );
-};
+}

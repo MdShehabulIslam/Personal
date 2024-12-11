@@ -30,7 +30,7 @@
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  opacity: 0.9;
+  opacity: 0.8;
   margin: 0;
   font-family: var(--font-roboto);
 }
@@ -56,72 +56,90 @@
 
 .description {
   color: var(--color-text);
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
-  font-weight: 400;
-  opacity: 0.8;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
   line-height: 1.6;
+  opacity: 0.9;
   margin: 0;
+  font-family: var(--font-roboto);
 }
 
 .contactBtn,
-.downloadBtn {
+.resumeBtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 8px;
   text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.3s ease;
   cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .contactBtn {
   background: var(--color-primary);
-  color: #ffffff;
-  border: none;
-  box-shadow: 0 4px 6px rgba(var(--color-primary-rgb), 0.25);
-}
-
-.downloadBtn {
-  background: transparent;
   color: var(--color-text);
-  border: 2px solid var(--color-primary);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
 }
 
 .contactBtn:hover {
-  background: var(--color-primary);
+  background: var(--color-secondary);
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(var(--color-primary-rgb), 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.downloadBtn:hover {
-  background: rgba(var(--color-primary-rgb), 0.1);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.contactBtn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.contactBtn:active,
-.downloadBtn:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.resumeBtn {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.downloadIcon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.resumeBtn:hover .downloadIcon {
+  transform: translateY(2px);
+}
+
+.resumeBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-primary);
+}
+
+.resumeBtn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btnContainer {
   display: flex;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 24px;
+  margin-top: 24px;
 }
 
 .heroImg {
-  width: min(40%, 400px);
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  object-fit: cover;
-  z-index: 1;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  animation: float 6s ease-in-out infinite;
 }
 
 .topBlur {
@@ -158,15 +176,12 @@
   z-index: 0;
 }
 
-@keyframes floating {
-  0% {
-    transform: translate(0, 0px);
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
   }
   50% {
-    transform: translate(0, 10px);
-  }
-  100% {
-    transform: translate(0, -0px);
+    transform: translateY(-20px);
   }
 }
 
@@ -188,7 +203,6 @@
     flex-direction: column;
     gap: 3rem;
     text-align: center;
-    min-height: auto;
   }
 
   .content {
@@ -196,8 +210,20 @@
     max-width: 100%;
   }
 
+  .btnContainer {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contactBtn,
+  .resumeBtn {
+    width: 100%;
+    text-align: center;
+  }
+
   .heroImg {
-    width: min(70%, 300px);
+    max-width: 300px;
   }
 }
 
@@ -210,7 +236,7 @@
   }
 
   .contactBtn,
-  .downloadBtn {
+  .resumeBtn {
     width: 100%;
     text-align: center;
   }
