@@ -38,17 +38,17 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitStatus('success');
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setSubmitStatus("success");
       // Reset form
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus("error");
     }
-    
+
     setIsSubmitting(false);
     // Reset status after 3 seconds
     setTimeout(() => setSubmitStatus(null), 3000);
@@ -56,9 +56,9 @@ export const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -67,31 +67,31 @@ export const Contact = () => {
       icon: "contact/emailIcon.png",
       alt: "Email icon",
       href: "mailto:shehabul97@gmail.com",
-      text: "shehabul97@gmail.com"
+      text: "shehabul97@gmail.com",
     },
     {
       icon: "contact/linkedinIcon.png",
       alt: "LinkedIn icon",
-      href: "https://www.linkedin.com/in/mohammad-shehabul-islam-55b7b223a/",
-      text: "Mohammad Shehabul Islam"
+      href: "https://www.linkedin.com/in/mohammadshehabulislam/",
+      text: "mohammadshehabulislam",
     },
     {
       icon: "contact/githubIcon.png",
       alt: "Github icon",
       href: "https://github.com/MdShehabulIslam",
-      text: "MdShehabulIslam"
+      text: "MdShehabulIslam",
     },
     {
       icon: "contact/leetcodeIcon.png",
       alt: "Leetcode Icon",
       href: "https://leetcode.com/u/mohammadsi/",
-      text: "Mohammadsi"
-    }
+      text: "mohammadsi",
+    },
   ];
 
   return (
     <footer id="contact" className={styles.container}>
-      <motion.div 
+      <motion.div
         className={styles.content}
         initial="hidden"
         whileInView="visible"
@@ -104,7 +104,7 @@ export const Contact = () => {
         </motion.div>
 
         <div className={styles.contactWrapper}>
-          <motion.form 
+          <motion.form
             className={styles.form}
             onSubmit={handleSubmit}
             variants={containerVariants}
@@ -166,17 +166,14 @@ export const Contact = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
               >
-                {submitStatus === 'success' ? 
-                  "Message sent successfully!" : 
-                  "Error sending message. Please try again."}
+                {submitStatus === "success"
+                  ? "Message sent successfully!"
+                  : "Error sending message. Please try again."}
               </motion.div>
             )}
           </motion.form>
 
-          <motion.ul 
-            className={styles.links}
-            variants={containerVariants}
-          >
+          <motion.ul className={styles.links} variants={containerVariants}>
             {socialLinks.map((link, index) => (
               <motion.li
                 key={index}
@@ -185,7 +182,7 @@ export const Contact = () => {
                 whileHover={{ scale: 1.05, x: 10 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <motion.div 
+                <motion.div
                   className={styles.iconWrapper}
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
