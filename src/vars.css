@@ -6,6 +6,16 @@
   --color-dark: #0b2447;
   --color-bg: #04152d;
 
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  --gradient-text: linear-gradient(90deg, var(--color-text), var(--color-primary));
+  --gradient-border: linear-gradient(90deg, rgba(87, 108, 188, 0.8), rgba(25, 55, 109, 0.4));
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.2);
+
   /* Fonts */
   --font-roboto: "Roboto";
 }

@@ -8,6 +8,14 @@
     "imageSrc": "skills/css.png"
   },
   {
+    "title": "TailwindCSS",
+    "imageSrc": "skills/tailwind.png"
+  },
+  {
+    "title": "HeroUI",
+    "imageSrc": "skills/heroui.png"
+  },
+  {
     "title": "JavaScript",
     "imageSrc": "skills/javascript.png"
   },
@@ -16,12 +24,20 @@
     "imageSrc": "skills/react.png"
   },
   {
-    "title": "PostgreSQL",
-    "imageSrc": "skills/postgresql.png"
+    "title": "TypeScript",
+    "imageSrc": "skills/typescript.png"
+  },
+  {
+    "title": "NextJS",
+    "imageSrc": "skills/nextjs.png"
   },
   {
     "title": "Node",
     "imageSrc": "skills/node.png"
+  },
+  {
+    "title": "ExpressJS",
+    "imageSrc": "skills/express.png"
   },
   {
     "title": "C++",
@@ -36,15 +52,15 @@
     "imageSrc": "skills/python.png"
   },
   {
+    "title": "PostgreSQL",
+    "imageSrc": "skills/postgresql.png"
+  },
+  {
     "title": "Docker",
     "imageSrc": "skills/docker.png"
   },
   {
     "title": "Git",
     "imageSrc": "skills/git.png"
-  },
-  {
-    "title": "Cloud",
-    "imageSrc": "skills/aws.png"
   }
 ]
